@@ -90,7 +90,7 @@ ckan.module('related-datasets', function($) {
 
             $.ajax({
                 url: apiUrl,
-                data: {q: query, rows: 10},
+                data: {q: 'title:*' + query + '* OR name:*' + query + '*', rows: 10},
                 dataType: 'json',
                 success: function(response) {
                     if (response.success) {
