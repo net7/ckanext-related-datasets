@@ -129,3 +129,45 @@
 .related-datasets-display a:hover {
     text-decoration: underline;
 }
+
+/* Section titles (copiato da dcatapit) */
+.dcatapit-section-title {
+    border-bottom: 2px solid #8ca0a6;
+    margin: 24px 0 16px;
+    padding-bottom: 10px;
+}
+.dcatapit-section-title:first-child {
+    margin-top: 0;
+}
+.dcatapit-section-title h3 {
+    margin: 0 0 2px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 0.02em;
+}
+.dcatapit-section-title p {
+    margin: 0;
+    font-size: 13px;
+    color: #6c7a89;
+}
+
+/* Base fields wrapper (fields outside tabs) */
+.base-fields-section {
+    border: 1px solid #dde3e6;
+    border-radius: 4px;
+    padding: 1.5em 1.8em 1em;
+    margin-bottom: 1em;
+    background: #fdfdfd;
+}
+.base-fields-section > .form-group,
+.base-fields-section > .control-group {
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #eef1f3;
+}
+.base-fields-section > .form-group:last-child,
+.base-fields-section > .control-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}

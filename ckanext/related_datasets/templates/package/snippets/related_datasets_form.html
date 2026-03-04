@@ -12,26 +12,31 @@
 {% asset 'ckanext-related-datasets/related-datasets-style' %}
 {% asset 'ckanext-related-datasets/related-datasets-script' %}
 
-<div class="related-datasets-wrap control-group form-group">
-    <label for="related-datasets-search">{{ _('Datasets Collegati') }}</label>
-    <p class="help-block">{{ _('Cerca e seleziona i dataset da collegare a questo dataset. Il collegamento sarà bidirezionale.') }}</p>
+<div class="dcatapit-section-title">
+    <h3>{{ _('Datasets Collegati') }}</h3>
+    <p>{{ _('Cerca e seleziona i dataset da collegare a questo dataset.') }}</p>
+</div>
 
-    <div data-module="related-datasets"
-         data-module-existing='{{ h.dump_json(related_datasets_info) }}'
-         data-module-current-dataset="{{ pkg_id }}">
+<div class="base-fields-section">
+    <div class="related-datasets-wrap control-group form-group">
+        <div data-module="related-datasets"
+             data-module-existing='{{ h.dump_json(related_datasets_info) }}'
+             data-module-current-dataset="{{ pkg_id }}">
 
-        <input type="text"
-               class="related-datasets-search"
-               placeholder="{{ _('Cerca un dataset per titolo...') }}"
-               autocomplete="off" />
+            <input type="text"
+                   id="related-datasets-search"
+                   class="related-datasets-search"
+                   placeholder="{{ _('Cerca un dataset per titolo...') }}"
+                   autocomplete="off" />
 
-        <ul class="related-datasets-results"></ul>
+            <ul class="related-datasets-results"></ul>
 
-        <div class="related-datasets-selected"></div>
+            <div class="related-datasets-selected"></div>
 
-        <input type="hidden"
-               name="related_datasets_ids"
-               class="related-datasets-ids"
-               value="{{ related_ids | join(',') }}" />
+            <input type="hidden"
+                   name="related_datasets_ids"
+                   class="related-datasets-ids"
+                   value="{{ related_ids | join(',') }}" />
+        </div>
     </div>
 </div>
