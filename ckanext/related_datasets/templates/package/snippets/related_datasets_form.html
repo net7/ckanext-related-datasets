@@ -17,7 +17,7 @@
     <p class="help-block">{{ _('Cerca e seleziona i dataset da collegare a questo dataset. Il collegamento sarà bidirezionale.') }}</p>
 
     <div data-module="related-datasets"
-         data-module-existing='{{ h.json_dump(related_datasets_info) }}'
+         data-module-existing='{{ h.dump_json(related_datasets_info) }}'
          data-module-current-dataset="{{ pkg_id }}">
 
         <input type="text"
