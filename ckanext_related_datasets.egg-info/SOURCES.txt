@@ -13,6 +13,7 @@ ckanext/related_datasets/logic/action.py
 ckanext/related_datasets/logic/auth.py
 ckanext/related_datasets/logic/validators.py
 ckanext/related_datasets/templates/package/read.html
+ckanext/related_datasets/templates/package/snippets/dataset_card.html
 ckanext/related_datasets/templates/package/snippets/package_basic_fields.html
 ckanext/related_datasets/templates/package/snippets/related_datasets_display.html
 ckanext/related_datasets/templates/package/snippets/related_datasets_form.html

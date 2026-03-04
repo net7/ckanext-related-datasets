@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
 Name: ckanext-related-datasets
 Version: 0.0.1
-Summary: Collegamento N:N bidirezionale tra dataset CKAN con mappatura dct:relation
+Summary: Bidirectional N:N linking between CKAN datasets with dct:relation mapping
 Author-email: Net7 <info@netseven.it>
 License: AGPL
 Keywords: CKAN,DCAT,related datasets

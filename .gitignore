@@ -4,5 +4,5 @@
 *.code-workspace
 
 # Python cache files
-ckanext/related_datasets/__pycache__
-ckanext/related_datasets/logic/__pycache__
+ckanext/related_datasets/__pycache__/*
+ckanext/related_datasets/logic/__pycache__/*
