@@ -7,28 +7,32 @@ pkg_dict - the dataset dict
 
 {% set linked_to = h.get_related_datasets_direct(pkg_dict.id) %}
 {% if linked_to %}
-    <section class="rtds-pb-4 rtds-pt-4 md:rtds-px-6 rtds-grid rtds-gap-8">
-        <div class="rtds-grid rtds-gap-4">
-            <h3 class="rtds-heading-3">{{ _('Related datasets') }}</h3>
-            <ul class="rtds-grid rtds-gap-4">
-                {% for ds in linked_to %}
-                {% snippet "package/snippets/dataset_card.html", dataset=ds %}
-                {% endfor %}
-            </ul>
-        </div>
-    </section>
+<div class="rtds-grid rtds-mb-6 rtds-gap-4 rtds-py-8 rtds-px-4 rtds-bg-white rtds-rounded-xl">
+  <section class="rtds-pb-4 rtds-pt-4 md:rtds-px-6 rtds-grid rtds-gap-8">
+    <div class="rtds-grid rtds-gap-4">
+      <h3 class="rtds-heading-3">{{ _('Related datasets') }}</h3>
+      <ul class="rtds-grid rtds-gap-4">
+        {% for ds in linked_to %}
+        {% snippet "package/snippets/dataset_card.html", dataset=ds %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>
 {% endif %}
 
 {% set linked_from = h.get_linked_from_datasets_direct(pkg_dict.id) %}
 {% if linked_from %}
-    <section class="rtds-pb-4 rtds-pt-4 md:rtds-px-6 rtds-grid rtds-gap-8">
-        <div class="rtds-grid rtds-gap-4">
-            <h3 class="rtds-heading-3">{{ _('Linked from') }}</h3>
-            <ul class="rtds-grid rtds-gap-4">
-                {% for ds in linked_from %}
-                {% snippet "package/snippets/dataset_card.html", dataset=ds %}
-                {% endfor %}
-            </ul>
-        </div>
-    </section>
+<div class="rtds-grid rtds-mb-6 rtds-gap-4 rtds-py-8 rtds-px-4 rtds-bg-white rtds-rounded-xl">
+  <section class="rtds-pb-4 rtds-pt-4 md:rtds-px-6 rtds-grid rtds-gap-8">
+    <div class="rtds-grid rtds-gap-4">
+      <h3 class="rtds-heading-3">{{ _('Linked from') }}</h3>
+      <ul class="rtds-grid rtds-gap-4">
+        {% for ds in linked_from %}
+        {% snippet "package/snippets/dataset_card.html", dataset=ds %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>
 {% endif %}
