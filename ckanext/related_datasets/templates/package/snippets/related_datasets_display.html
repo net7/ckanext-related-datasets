@@ -9,31 +9,27 @@
 {% set linked_from = h.get_linked_from_datasets_direct(pkg_dict.id) %}
 
 {% if linked_to or linked_from %}
-<section class="related-datasets-display">
+<section class="rtds-pb-4 rtds-pt-4 md:rtds-px-6 rtds-grid rtds-gap-8">
     {% if linked_to %}
-    <h3>{{ _('Datasets Collegati') }}</h3>
-    <ul>
-        {% for ds in linked_to %}
-        <li>
-            <a href="{{ h.url_for('dataset.read', id=ds.name) }}">
-                {{ ds.title }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="rtds-grid rtds-gap-4">
+        <h3 class="rtds-heading-3">{{ _('Related datasets') }}</h3>
+        <ul class="rtds-grid rtds-gap-4">
+            {% for ds in linked_to %}
+                {% snippet "package/snippets/dataset_card.html", dataset=ds %}
+            {% endfor %}
+        </ul>
+    </div>
     {% endif %}
 
     {% if linked_from %}
-    <h3>{{ _('Collegato da') }}</h3>
-    <ul>
-        {% for ds in linked_from %}
-        <li>
-            <a href="{{ h.url_for('dataset.read', id=ds.name) }}">
-                {{ ds.title }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="rtds-grid rtds-gap-4">
+        <h3 class="rtds-heading-3">{{ _('Collegato da') }}</h3>
+        <ul class="rtds-grid rtds-gap-4">
+            {% for ds in linked_from %}
+                {% snippet "package/snippets/dataset_card.html", dataset=ds %}
+            {% endfor %}
+        </ul>
+    </div>
     {% endif %}
 </section>
 {% endif %}

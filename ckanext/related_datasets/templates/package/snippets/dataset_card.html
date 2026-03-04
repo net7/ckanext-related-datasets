@@ -1,0 +1,13 @@
+<li class="rtds-py-4 rtds-border-t rtds-border-gray-01 rtds-grid sm:rtds-flex sm:rtds-flex-wrap rtds-justify-items-start sm:rtds-justify-between rtds-items-center rtds-gap-4" data-id="{{ dataset.id }}">
+  <span class="rtds-truncate sm:rtds-overflow-auto rtds-w-full sm:rtds-w-auto">
+  {{ dataset.title }}
+  </span>
+  <div class="rtds-flex rtds-flex-wrap rtds-gap-4 rtds-items-center">
+      <a class="rtds-action-link rtds-action-link--sm" href="{{ h.url_for('dataset.read', id=dataset.name) }}" target="_blank" rel="noreferrer">
+      {{ _('Go to dataset') }} <span class="rtds-sr-only"> {{ dataset.title }} </span>
+      <svg class="rtds-icon rtds-fill-current rtds-w-4 rtds-h-4 md:rtds-w-5 md:rtds-h-5 lg:rtds-w-6 lg:rtds-h-6 rtds-transition-all rtds-duration-200 rtds-ease-out rtds-transform group-hover:rtds-translate-x-1" aria-hidden="true" focusable="false" role="img">
+          <use href="/icons.svg#mini--arrow-top-right-on-square"></use>
+      </svg>
+      </a>
+  </div>
+</li>
