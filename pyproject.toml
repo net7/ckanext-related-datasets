@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ckanext-related-datasets"
+version = "0.0.1"
+description = "Collegamento N:N bidirezionale tra dataset CKAN con mappatura dct:relation"
+readme = "README.md"
+license = {text = "AGPL"}
+authors = [
+    {name = "Net7", email = "info@netseven.it"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3.10",
+]
+keywords = ["CKAN", "DCAT", "related datasets"]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.entry-points."ckan.plugins"]
+related_datasets = "ckanext.related_datasets.plugin:RelatedDatasetsPlugin"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["*.html", "*.css", "*.js", "*.po", "*.mo"]

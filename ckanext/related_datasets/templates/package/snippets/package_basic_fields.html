@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block package_basic_fields_custom %}
+    {{ super() }}
+    {# Render the related datasets form widget.
+       The dcatapit JS tab system will move .related-datasets-wrap into the "related" tab
+       if the tab configuration includes it. #}
+    {% snippet "package/snippets/related_datasets_form.html", data=data %}
+{% endblock %}

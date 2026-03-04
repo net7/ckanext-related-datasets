@@ -1,0 +1,6 @@
+{% ckan_extends %}
+
+{% block package_additional_info %}
+    {{ super() }}
+    {% snippet "package/snippets/related_datasets_display.html", pkg_dict=pkg %}
+{% endblock %}

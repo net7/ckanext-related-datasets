@@ -1,0 +1,131 @@
+.related-datasets-wrap {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.related-datasets-wrap label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.related-datasets-search {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.related-datasets-search:focus {
+    border-color: #1f9b62;
+    outline: none;
+    box-shadow: 0 0 3px rgba(31, 155, 98, 0.3);
+}
+
+.related-datasets-results {
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    max-height: 250px;
+    overflow-y: auto;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.related-dataset-result {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.related-dataset-result:hover {
+    background-color: #f0f0f0;
+}
+
+.related-dataset-result:last-child {
+    border-bottom: none;
+}
+
+.no-results {
+    padding: 8px 12px;
+    color: #999;
+    font-style: italic;
+}
+
+.related-datasets-selected {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.related-dataset-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.related-dataset-tag a {
+    color: #2e7d32;
+    text-decoration: none;
+    margin-right: 6px;
+}
+
+.related-dataset-tag a:hover {
+    text-decoration: underline;
+}
+
+.related-dataset-remove {
+    background: none;
+    border: none;
+    color: #c62828;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0 2px;
+    font-weight: bold;
+}
+
+.related-dataset-remove:hover {
+    color: #b71c1c;
+}
+
+/* Display in read page */
+.related-datasets-display {
+    margin-top: 10px;
+}
+
+.related-datasets-display ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-datasets-display li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.related-datasets-display li:last-child {
+    border-bottom: none;
+}
+
+.related-datasets-display a {
+    color: #1f9b62;
+    text-decoration: none;
+}
+
+.related-datasets-display a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: ckanext-related-datasets
+Version: 0.0.1
+Summary: Collegamento N:N bidirezionale tra dataset CKAN con mappatura dct:relation
+Author-email: Net7 <info@netseven.it>
+License: AGPL
+Keywords: CKAN,DCAT,related datasets
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

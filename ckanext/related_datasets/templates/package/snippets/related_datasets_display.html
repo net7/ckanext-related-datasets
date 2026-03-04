@@ -1,0 +1,39 @@
+{#
+  Display related datasets on the dataset read page.
+  Shows datasets linked FROM this dataset and datasets that link TO this dataset.
+
+  pkg_dict - the dataset dict
+#}
+
+{% set linked_to = h.get_related_datasets_direct(pkg_dict.id) %}
+{% set linked_from = h.get_linked_from_datasets_direct(pkg_dict.id) %}
+
+{% if linked_to or linked_from %}
+<section class="related-datasets-display">
+    {% if linked_to %}
+    <h3>{{ _('Datasets Collegati') }}</h3>
+    <ul>
+        {% for ds in linked_to %}
+        <li>
+            <a href="{{ h.url_for('dataset.read', id=ds.name) }}">
+                {{ ds.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if linked_from %}
+    <h3>{{ _('Collegato da') }}</h3>
+    <ul>
+        {% for ds in linked_from %}
+        <li>
+            <a href="{{ h.url_for('dataset.read', id=ds.name) }}">
+                {{ ds.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</section>
+{% endif %}

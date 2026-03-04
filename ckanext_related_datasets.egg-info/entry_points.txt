@@ -1,0 +1,2 @@
+[ckan.plugins]
+related_datasets = ckanext.related_datasets.plugin:RelatedDatasetsPlugin

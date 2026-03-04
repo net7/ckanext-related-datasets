@@ -1,0 +1,13 @@
+related-datasets-script:
+  filters: rjsmin
+  output: ckanext-related-datasets/related-datasets.js
+  extra:
+    preload:
+      - base/main
+  contents:
+    - related-datasets.js
+
+related-datasets-style:
+  output: ckanext-related-datasets/related-datasets.css
+  contents:
+    - related-datasets.css
