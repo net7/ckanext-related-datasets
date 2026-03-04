@@ -69,6 +69,12 @@ class RelatedDatasetsPlugin(plugins.SingletonPlugin):
         return [related_datasets]
 
     # IPackageController
+    def before_index(self, pkg_dict):
+        """Remove injected fields that are not in the Solr schema."""
+        pkg_dict.pop('related_datasets', None)
+        pkg_dict.pop('linked_from_datasets', None)
+        return pkg_dict
+
     def after_dataset_create(self, context, pkg_dict):
         self._sync_related_datasets(context, pkg_dict)
         return pkg_dict
