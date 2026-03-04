@@ -20,7 +20,12 @@ ckan.module('related-datasets', function($) {
 
             this.existingDatasets = [];
             try {
-                this.existingDatasets = JSON.parse(this.options.existing);
+                var existing = this.options.existing;
+                if (typeof existing === 'string') {
+                    this.existingDatasets = JSON.parse(existing);
+                } else if (Array.isArray(existing)) {
+                    this.existingDatasets = existing;
+                }
             } catch(e) {
                 this.existingDatasets = [];
             }
