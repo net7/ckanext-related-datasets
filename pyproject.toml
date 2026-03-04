@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ckanext-related-datasets"
 version = "0.0.1"
-description = "Collegamento N:N bidirezionale tra dataset CKAN con mappatura dct:relation"
+description = "Bidirectional N:N linking between CKAN datasets with dct:relation mapping"
 readme = "README.md"
 license = {text = "AGPL"}
 authors = [
